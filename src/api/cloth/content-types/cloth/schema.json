@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cloths",
+  "info": {
+    "singularName": "cloth",
+    "pluralName": "cloths",
+    "displayName": "Cloth",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cloth_name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "cloth_id": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}
