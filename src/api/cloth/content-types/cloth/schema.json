@@ -29,9 +29,11 @@
     "price": {
       "type": "decimal"
     },
-    "cloth_id": {
-      "type": "uid",
-      "required": true
+    "sizes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::size.size",
+      "inversedBy": "cloths"
     }
   }
 }
