@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_cloths",
+  "info": {
+    "singularName": "user-cloth",
+    "pluralName": "user-cloths",
+    "displayName": "user_cloth"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cloth_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cloth.cloth",
+      "inversedBy": "user_cloths"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_cloths"
+    }
+  }
+}

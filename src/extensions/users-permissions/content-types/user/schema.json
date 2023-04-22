@@ -79,6 +79,12 @@
         "videos",
         "audios"
       ]
+    },
+    "user_cloths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-cloth.user-cloth",
+      "mappedBy": "user_id"
     }
   }
 }

@@ -34,6 +34,12 @@
       "relation": "manyToMany",
       "target": "api::size.size",
       "inversedBy": "cloths"
+    },
+    "user_cloths": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-cloth.user-cloth",
+      "mappedBy": "cloth_id"
     }
   }
 }
