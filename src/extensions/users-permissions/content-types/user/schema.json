@@ -80,11 +80,14 @@
         "audios"
       ]
     },
-    "user_cloths": {
+    "cloths": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::user-cloth.user-cloth",
-      "mappedBy": "user_id"
+      "relation": "manyToMany",
+      "target": "api::cloth.cloth",
+      "inversedBy": "users"
+    },
+    "prueba": {
+      "type": "string"
     }
   }
 }
