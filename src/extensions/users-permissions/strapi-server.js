@@ -4,7 +4,19 @@ module.exports = (plugin) => {
             return ctx.response.status = 401;
         }
         await strapi.query('plugin::users-permissions.user').update({
+            select: [],
             where: {id: ctx.state.user.id},
+            populate: { 
+                cloths: {
+                    select: ['*'],
+                    populate: {
+                        img: {
+                            select: ['url']
+                        },
+                        sizes: true
+                    }
+                  }
+            },
             data: ctx.request.body
         }).then((res) => {
             ctx.response.status = 200;
