@@ -88,6 +88,9 @@
     },
     "prueba": {
       "type": "string"
+    },
+    "size": {
+      "type": "string"
     }
   }
 }

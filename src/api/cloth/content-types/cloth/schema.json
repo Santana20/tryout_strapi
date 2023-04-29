@@ -40,6 +40,16 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "cloths"
+    },
+    "size": {
+      "type": "string"
+    },
+    "categoria": {
+      "type": "enumeration",
+      "enum": [
+        "clasico",
+        "moderno"
+      ]
     }
   }
 }
