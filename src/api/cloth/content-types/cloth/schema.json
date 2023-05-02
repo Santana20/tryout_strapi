@@ -50,6 +50,9 @@
         "clasico",
         "moderno"
       ]
+    },
+    "descripcion": {
+      "type": "text"
     }
   }
 }
