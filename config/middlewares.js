@@ -1,6 +1,5 @@
 module.exports = [
   'strapi::errors',
-  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
@@ -9,4 +8,19 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  //'strapi::security',
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefault: true,
+        directives: {
+          "connect-src": ["'self'",'https:'],
+          "img-src": ["'self'", "data:", "blob:", "https://res.cloudinary.com/"],
+          "media-src": ["'self'", "data:", "blob:"],
+          upgradeInsecureRequests: null,
+        }
+      }
+    }
+  },
 ];
